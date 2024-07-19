@@ -1,0 +1,754 @@
+
+<!DOCTYPE html>
+<html charset="utf-8">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>미투온</title>
+<meta name="Robots" content="all" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="미투온은 모바일게임, 웹툰/웹소설, 연예 매니지먼트, 영화/드라마 제작으로 글로벌 컨텐츠 문화를 이끌어나가는 종합 엔터테인먼트 기업입니다." />
+<meta name="Author" content="ME2ON" />
+<meta name="Copyright" content="ME2ON Co., Ltd" />
+<meta name="reply-to" content="" />
+<meta name="date" content="" />
+<meta property="og:title" content="ME2ON Co., Ltd" />
+<meta property="og:description" content="Global Leading Casual Gaming & Entertainment Company" />
+<link rel="stylesheet" type="text/css" href="/css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/css/index_pc.css?ver=5" media="screen and (min-width:1400px)" />
+<link rel="stylesheet" type="text/css" href="/css/index_tablet.css?ver=5" media="screen and (min-width:813px) and (max-width:1399px)" />
+<link rel="stylesheet" type="text/css" href="/css/index_mobile.css?ver=5" media="screen and (max-width:812px)" />
+<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src='//www.youtube.com/iframe_api'></script>
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<script src="https://www.youtube.com/player_api"></script>
+</head>
+<body>
+<script language="javascript">
+function setCookie( name, value, expiredays ){
+	var todayDate = new Date();
+	todayDate.setDate( todayDate.getDate() + expiredays );
+	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+function pop_close(name,idx){
+	setCookie(name, "done" , 1);
+	$("#layer_pop"+idx).hide();
+}
+
+function pop_hide(idx){
+	$("#layer_pop"+idx).hide();
+}
+
+$(function(){
+	var pop_move = false;
+	$(".main_layer_popup .pop_link").click(function(){
+		var data = $(this).data("pop_idx");
+		if(!pop_move){
+			pop_hide(data);
+		}
+	})
+
+	$(".main_layer_popup").draggable({ 
+		handle: "div.pop_bottom",
+		cursor: "move"
+	});
+});
+</script>
+
+<div id="wrap">
+	<ul class="blind">
+		<li><a href="#contents">본문 바로가기(Skip Contents)</a></li>
+	</ul>
+
+<div id="bg_black"></div>
+<div id="header">
+	<div class="head">
+	<h1><a href="/"><img src="/images/common/logo1.png" alt="" /></a></h1>
+	<ul class="pc_nav">
+		<li class="sub"><a href="/m11.php">COMPANY</a></li>
+		<li class=""><a href="/m21.php">GAME</a></li>
+		<li class="sub"><a href="/m31.php">IR</a></li>
+		<li class="sub"><a href="/board/board.php?bo_table=news">PR</a></li>
+		<li class="sub"><a href="/m51.php">RECRUIT</a></li>
+	</ul>
+	<div class="gnb">
+		<ul class="tnav">
+			<li><a href="/">HOME</a></li>
+			<li><a href="/m11.php?#tab5">CONTACT US</a></li>
+			<li class="lang">
+				<a>KOR</a>
+				<ul>
+					<li><a href="/">KOR</a></li>
+					<li><a href="/en">ENG</a></li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="sns">
+			<li><a href="https://www.facebook.com/me2on/" target="_blank"><img src="/images/common/sns_facebook.png" alt="미투온 페이스북" /></a></li>
+			<li><a href="https://www.youtube.com/channel/UCFIjZGzd-doStj9T9voGq_w" target="_blank"><img src="/images/common/sns_youtube.png" alt="미투온 유튜브" /></a></li>
+            <li><a href="https://www.linkedin.com/company/me2on-group" target="_blank"><img src="/images/common/sns_linkedin.png" alt="미투온 링크드인" /></a></li>
+		</ul>
+	</div>
+	<div class="btn_menu">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</div>
+<div class="submenu">
+	<ul>
+		<li><a href="/m11.php?#tab1">회사개요</a></li>
+		<li><a href="/m11.php?#tab2">CEO 인사말</a></li>
+		<li><a href="/m11.php?#tab3">VISION & MISSION</a></li>
+		<li><a href="/m11.php?#tab4">연혁</a></li>
+		<li><a href="/m11.php?#tab5">오시는길</a></li>
+	</ul>
+	<ul><li>&nbsp;</li></ul>
+	<ul>
+		<li><a href="/m31.php">공시정보</a></li>
+		<li><a href="/m32.php">주가정보</a></li>
+		<li><a href="/m33.php">재무정보</a></li>
+		<li><a href="/board/board.php?bo_table=irdata">IR자료실</a></li>
+		<li><a href="/board/board.php?bo_table=notice">공고</a></li>
+	</ul>
+	<ul>
+		<li><a href="/board/board.php?bo_table=news">뉴스</a></li>
+		<li><a href="/board/board.php?bo_table=media">미디어</a></li>
+		<li><a href="/board/board.php?bo_table=gallery">갤러리</a></li>
+	</ul>
+	<ul>
+		<li><a href="/m51.php">인재상</a></li>
+		<li><a href="/m52.php">복리후생</a></li>
+		<li><a href="/board/board.php?bo_table=recruit">채용공고</a></li>
+	</ul>
+</div>
+
+<div class="allmenu">
+	<div class="m_gnb">
+		<ul class="tnav">
+			<li><a href="/">HOME</a></li>
+			<li><a href="/m11.php?#tab5">CONTACT US</a></li>
+			<li class="lang">
+				<a>KOR</a>
+				<ul>
+					<li><a href="/">KOR</a></li>
+					<li><a href="/en">ENG</a></li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="sns">
+			<li><a href="https://www.facebook.com/me2on/" target="_blank"><img src="/images/common/sns_facebook.png" alt="미투온 페이스북" /></a></li>
+			<li><a href="https://www.youtube.com/channel/UCFIjZGzd-doStj9T9voGq_w" target="_blank"><img src="/images/common/sns_youtube.png" alt="미투온 유튜브" /></a></li>
+            <li><a href="https://www.linkedin.com/company/me2on-group" target="_blank"><img src="/images/common/sns_linkedin.png" alt="미투온 링크드인" /></a></li>
+		</ul>
+	</div>
+	<div class="m_nav">
+		<ul>
+			<li class="sub"><a><span>COMPANY</span></a>
+				<ul>
+					<li><a href="/m11.php?#tab1">회사개요</a></li>
+					<li><a href="/m11.php?#tab2">CEO 인사말</a></li>
+					<li><a href="/m11.php?#tab3">VISION&MISSION</a></li>
+					<li><a href="/m11.php?#tab4">연혁</a></li>
+					<li><a href="/m11.php?#tab5">오시는 길</a></li>
+				</ul>
+			</li>
+			<li><a href="/m21.php"><span>GAME</span></a></li>
+			<li class="sub"><a><span>IR</span></a>
+				<ul>
+					<li><a href="/m31.php">공시정보</a></li>
+					<li><a href="/m32.php">주가정보</a></li>
+					<li><a href="/m33.php">재무정보</a></li>
+					<li><a href="/board/board.php?bo_table=irdata">IR자료실</a></li>
+					<li><a href="/board/board.php?bo_table=notice">공고</a></li>
+				</ul>
+			</li>
+			<li class="sub"><a><span>PR</span></a>
+				<ul>
+					<li><a href="/board/board.php?bo_table=news">뉴스</a></li>
+					<li><a href="/board/board.php?bo_table=media">미디어</a></li>
+					<li><a href="/board/board.php?bo_table=gallery">갤러리</a></li>
+				</ul>			
+			</li>
+			<li class="sub"><a><span>RECRUIT</span></a>
+				<ul>
+					<li><a href="/m51.php">인재상</a></li>
+					<li><a href="/m52.php">복리후생</a></li>
+					<li><a href="/board/board.php?bo_table=recruit">채용공고</a></li>
+				</ul>			
+			</li>
+		</ul>
+	</div>
+</div></div><!-- //header -->
+<div id="visual">
+
+<script>
+	$(function(){
+		$('#play-button').click(function(){
+		});
+
+		$('#stop-button').click(function(){
+			alert('stop');
+		  $('#myvideo')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+		});
+	});
+</script>
+	<div class="swiper-container visual">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide v1">
+				<div class="bg pcbr" style="background:url(/images/main/visual2.jpg) no-repeat center;background-size:cover;"></div>	
+				<div class="bg tbbr" style="background:url(/images/main/visual2_m.jpg) no-repeat center;background-size:cover;"></div>	
+				<div class="bg mbbr" style="background:url(/images/main/visual2_m1.jpg) no-repeat center;background-size:cover;"></div>	
+				<div class="txtswrap">
+					<h2 class="pcv">
+						<svg height="235">
+						  <defs>
+							<linearGradient id="rainbow" x1="0" x2="0" y1="0" y2="100%" gradientUnits="userSpaceOnUse" >
+							  <stop stop-color="#fff" offset="20%"/>
+							  <stop stop-color="#f8d724" offset="20%"/>
+							</linearGradient>
+							<linearGradient id="rainbow2" x1="0" x2="0" y1="0" y2="100%" gradientUnits="userSpaceOnUse" >
+							  <stop stop-color="#fff" offset="55%"/>
+							  <stop stop-color="#f8d724" offset="55%"/>
+							</linearGradient>
+                            <linearGradient id="rainbow3" x1="0" x2="0" y1="0" y2="100%" gradientUnits="userSpaceOnUse" >
+							  <stop stop-color="#fff" offset="90%"/>
+							  <stop stop-color="#f8d724" offset="90%"/>
+							</linearGradient>
+						  </defs>
+							<text fill="url(#rainbow)" text-anchor="middle">
+							  <tspan x="50%" y="30%" dy="0">GLOBAL LEADING</tspan>
+							</text>
+							<text fill="url(#rainbow2)" text-anchor="middle">
+							  <tspan x="50%" y="65%" dy="0">ENTERTAINMENT</tspan>
+							</text>
+                            <text fill="url(#rainbow3)" text-anchor="middle">
+							  <tspan x="50%" y="100%" dy="0">COMPANY</tspan>
+							</text>
+						</svg>
+					</h2>
+					<h2 class="tmv">
+						<svg height="235">
+						  <defs>
+							<linearGradient id="rainbow_1" x1="0" x2="0" y1="0" y2="100%" gradientUnits="userSpaceOnUse" >
+							  <stop stop-color="#fff" offset="20%"/>
+							  <stop stop-color="#f8d724" offset="20%"/>
+							</linearGradient>
+							<linearGradient id="rainbow_2" x1="0" x2="0" y1="0" y2="100%" gradientUnits="userSpaceOnUse" >
+							  <stop stop-color="#fff" offset="55%"/>
+							  <stop stop-color="#f8d724" offset="55%"/>
+							</linearGradient>
+                            <linearGradient id="rainbow_3" x1="0" x2="0" y1="0" y2="100%" gradientUnits="userSpaceOnUse" >
+							  <stop stop-color="#fff" offset="90%"/>
+							  <stop stop-color="#f8d724" offset="90%"/>
+							</linearGradient>
+						  </defs>
+							<text fill="url(#rainbow_1)" text-anchor="middle">
+							  <tspan x="50%" y="30%" dy="0">GLOBAL LEADING</tspan>
+							</text>
+							<text fill="url(#rainbow_2)" text-anchor="middle">
+							  <tspan x="50%" y="65%" dy="0">ENTERTAINMENT</tspan>
+							</text>
+                            <text fill="url(#rainbow_3)" text-anchor="middle">
+							  <tspan x="50%" y="100%" dy="0">COMPANY</tspan>
+							</text>
+						</svg>
+					</h2>
+				</div>	
+			</div>
+			<div class="swiper-slide v2">
+		
+					<iframe id="myvideo" class="video1" width="100%" height="100%" src="https://www.youtube.com/embed/Z9OBcEh6vXw?amp;playlist=Z9OBcEh6vXw&amp;loop=1&amp;enablejsapi= 1" frameborder="0" allowfullscreen></iframe>
+				
+			</div>
+		</div>
+		<div class="ctr">	
+			<div class="vprev"><img src="/images/main/vprev.png" alt="" /></div>
+			<div class="vnext"><img src="/images/main/vnext.png" alt="" /></div>
+		</div>		
+	</div>	
+	<div class="mouse">
+		<div></div>
+	</div>
+</div>
+<div id="container">
+<div id="contents">
+
+	<div class="section1">
+		
+		<h3 class="title1">OUR GAMES</h3>
+		<div class="conwrap">
+		<div class="pcv">
+			<ul>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game1.jpg" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>FULL HOUSE CASINO</h4>
+							<p>아시아 NO.1 소셜카지노</p>
+							<ul>
+								<li><a href="http://goo.gl/fR2bsD" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="http://goo.gl/y0YN2r" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+								<li><a href="https://www.oculus.com/experiences/gear-vr/2247877368571344/" target="_blank"><img src="/images/main/ico_3.png" alt="타원형" /></a></li>
+							</ul>
+						</div>
+					</div></div>
+				</li>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game2.jpg" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>FULPOT POKER</h4>
+							<p>아시아 NO.1 모바일 홀덤포커</p>
+							<ul>
+								<li><a href="https://play.google.com/store/apps/details?id=com.me2on.fulpotgenius" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="https://apps.apple.com/us/app/fulpot-holdem-poker/id1166415380" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+								<li><a href="http://www.fulpot.com/" target="_blank"><img src="/images/main/ico_pc.png" alt="pc" /></a></li>
+								<li><a href="https://www.oculus.com/experiences/gear-vr/1475724512535901/?ranking_trace=107293880442967_1475724512535901_SKYLINEWEB_11CAUnT9surXFxJUU" target="_blank"><img src="/images/main/ico_3.png" alt="타원형" /></a></li>
+							</ul>
+						</div></div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game3.jpg" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>CLASSIC VEGAS CASINO</h4>
+							<p>북미 NO.1 클래식 슬롯게임</p>
+							<ul>
+								<li><a href="https://play.google.com/store/apps/details?id=com.zentertain.classicvegasslots" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="https://apps.apple.com/us/app/slots-classic-vegas-casino/id994102781" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+								<li><a href="https://www.facebook.com/login/?next=https%3A%2F%2Fapps.facebook.com%2Fclassic-vegas%2F" target="_blank"><img src="/images/main/ico_facebook.png" alt="페이스북" /></a></li>
+								<li><a href="https://www.amazon.com/gp/product/B00ZOM4A6Y/ref=mas_dl/133-2296423-8786131" target="_blank"><img src="/images/main/ico_a.png" alt="a" /></a></li>
+							</ul>
+						</div></div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game10_2.jpg?ver=1" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>MATCH MIRACLE 3D</h4>
+							<p>고품질 3D 모형으로 즐기는 매치3 퍼즐 게임</p>
+							<ul>
+								<li><a href="https://play.google.com/store/apps/details?id=com.triplematch.tile.game&hl=ko&gl=US" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="https://apps.apple.com/us/app/match-triple-master-3d/id6447222737" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+							</ul>
+						</div></div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game5.jpg" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>TRIPEAKS JOURNEY</h4>
+							<p>전략 캐주얼 카드 게임</p>
+							<ul>
+								<li><a href="https://play.google.com/store/apps/details?id=com.me2zen.tripeaks" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="https://apps.apple.com/us/app/solitaire-tripeaks-journey/id1434648535" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+							</ul>
+						</div></div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game6.jpg" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>FARM ADVENTURE</h4>
+							<p>전략 캐주얼 카드 게임</p>
+							<ul>
+								<li><a href="https://play.google.com/store/apps/details?id=com.me2zen.tripeaks.v4.and&hl=None" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="https://apps.apple.com/kr/app/%ED%81%B4%EB%A1%A0-%EB%8B%A4%EC%9D%B4%ED%81%AC-%ED%8C%9C-%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98/id1495577212" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+							</ul>
+						</div></div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game7.jpg" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>SOLITAIRE!</h4>
+							<p>전략 캐주얼 카드 게임</p>
+							<ul>
+								<li><a href="https://play.google.com/store/apps/details?id=com.spacegame.solitaire.basic" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="https://apps.apple.com/us/app/solitaire/id1066752474" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+							</ul>
+						</div></div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game11.jpg?ver=1" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>Solitaire Crypto War</h4>
+							<p>솔리테어 IP 기반 토너먼트 P2E게임</p>
+							<ul>
+								<li><a href="https://www.solitairecryptowar.com" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="https://www.solitairecryptowar.com" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+								<li><a href="https://www.solitairecryptowar.com" target="_blank"><img src="/images/main/apk.png" alt="APK" /></a></li>
+							</ul>
+						</div></div>
+					</div>
+				</li>
+			</ul>
+			</div>
+			<!-- 태블릿, 모바일 -->
+			<ul class="tmv">
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game1_t.jpg" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>FULL HOUSE CASINO</h4>
+							<p>아시아 NO.1 소셜카지노</p>
+							<ul>
+								<li><a href="http://goo.gl/fR2bsD" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="http://goo.gl/y0YN2r" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+								<li><a href="https://www.oculus.com/experiences/gear-vr/2247877368571344/" target="_blank"><img src="/images/main/ico_3.png" alt="타원형" /></a></li>
+							</ul>
+						</div>
+					</div></div>
+				</li>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game2_t.jpg" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>FULPOT POKER</h4>
+							<p>아시아 NO.1 모바일 홀덤포커</p>
+							<ul>
+								<li><a href="https://play.google.com/store/apps/details?id=com.me2on.fulpotgenius" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="https://apps.apple.com/us/app/fulpot-holdem-poker/id1166415380" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+								<li><a href="http://www.fulpot.com/" target="_blank"><img src="/images/main/ico_pc.png" alt="pc" /></a></li>
+								<li><a href="https://www.oculus.com/experiences/gear-vr/1475724512535901/?ranking_trace=107293880442967_1475724512535901_SKYLINEWEB_11CAUnT9surXFxJUU" target="_blank"><img src="/images/main/ico_3.png" alt="타원형" /></a></li>
+							</ul>
+						</div></div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game3_t.jpg" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>CLASSIC VEGAS CASINO</h4>
+							<p>북미 NO.1 클래식 슬롯게임</p>
+							<ul>
+								<li><a href="https://play.google.com/store/apps/details?id=com.zentertain.classicvegasslots" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="https://apps.apple.com/us/app/slots-classic-vegas-casino/id994102781" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+								<li><a href="https://www.facebook.com/login/?next=https%3A%2F%2Fapps.facebook.com%2Fclassic-vegas%2F" target="_blank"><img src="/images/main/ico_facebook.png" alt="페이스북" /></a></li>
+								<li><a href="https://www.amazon.com/gp/product/B00ZOM4A6Y/ref=mas_dl/133-2296423-8786131" target="_blank"><img src="/images/main/ico_a.png" alt="a" /></a></li>
+							</ul>
+						</div></div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game10_2_t.jpg?ver=1" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>MATCH MIRACLE 3D</h4>
+							<p>고품질 3D 모형으로 즐기는 매치3 퍼즐 게임</p>
+							<ul>
+								<li><a href="https://play.google.com/store/apps/details?id=com.triplematch.tile.game&hl=ko&gl=US" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="https://apps.apple.com/us/app/match-triple-master-3d/id6447222737" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+							</ul>
+						</div></div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game5_t.jpg" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>TRIPEAKS JOURNEY</h4>
+							<p>전략 캐주얼 카드 게임</p>
+							<ul>
+								<li><a href="https://play.google.com/store/apps/details?id=com.me2zen.tripeaks" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="https://apps.apple.com/us/app/solitaire-tripeaks-journey/id1434648535" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+							</ul>
+						</div></div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game6_t.jpg" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>FARM ADVENTURE</h4>
+							<p>전략 캐주얼 카드 게임</p>
+							<ul>
+								<li><a href="https://play.google.com/store/apps/details?id=com.me2zen.tripeaks.v4.and&hl=None" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="https://apps.apple.com/kr/app/%ED%81%B4%EB%A1%A0-%EB%8B%A4%EC%9D%B4%ED%81%AC-%ED%8C%9C-%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98/id1495577212" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+							</ul>
+						</div></div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game7_t.jpg" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>SOLITAIRE!</h4>
+							<p>전략 캐주얼 카드 게임</p>
+							<ul>
+								<li><a href="https://play.google.com/store/apps/details?id=com.spacegame.solitaire.basic" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="https://apps.apple.com/us/app/solitaire/id1066752474" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+							</ul>
+						</div></div>
+					</div>
+				</li>
+				<li>
+					<div class="thumb"><img src="/images/main/sec1_game11_t.jpg?ver=1" alt="" /></div>
+					<div class="down_layer">
+						<div><div>
+							<h4>Solitaire Crypto War</h4>
+							<p>솔리테어 IP 기반 토너먼트 P2E게임</p>
+							<ul>
+								<li><a href="https://www.solitairecryptowar.com" target="_blank"><img src="/images/main/ico_google.png" alt="구글플레이어" /></a></li>
+								<li><a href="https://www.solitairecryptowar.com" target="_blank"><img src="/images/main/ico_apple.png" alt="애플스토어" /></a></li>
+								<li><a href="https://www.solitairecryptowar.com" target="_blank"><img src="/images/main/apk.png" alt="APK" /></a></li>
+							</ul>
+						</div></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	
+	</div>
+
+
+	<div class="section2">
+		<div class="innerwrap">
+			<div class="bg1"></div>
+			<div class="bg2"></div>
+			<div class="conwrap">
+				<h3 class="title1">CORE COMPETITIVENESS</h3>
+				<p>Entertain the World with Best Social Casino Games</p>
+				<ul>
+					<li>
+						<div class="ico"><img src="/images/main/sec2_ico1.png" alt="" /></div>
+						<h4>Strong Brand Power</h4>
+						<div class="con">
+							<dl class="st1">
+								<dt>Full House Casino</dt>
+								<dd>- 아시아 No.1 소셜카지노</dd>
+								<dd>- 일본, 대만, 홍콩, 싱가폴 Top10</dd>
+							</dl>
+							<dl class="st1">
+								<dt>Solitaire(솔리테르)</dt>
+								<dd>- 2014년 출시로 미국, 캐나다, 일본 등 글로벌 시장 초기 선점</dd>
+								<dd>- 북미, 유럽, 아시아 주요 국가 다운로드 상위권 랭킹</dd>
+							</dl>
+						</div>
+					</li>
+
+					<li>
+						<div class="ico"><img src="/images/main/sec2_ico2.png" alt="" /></div>
+						<h4>Business Diversification</h4>
+						<div class="con">
+							<ul>
+								<li>
+									<div class="thumb"><img src="/images/main/sec2_t_img1_1.jpg" alt="" /></div>
+									<div class="tit">Social Casino</div>
+								</li>
+								<li>
+									<div class="thumb"><img src="/images/main/sec2_t_img5_1.jpg" alt="" /></div>
+									<div class="tit">Casual Game</div>
+								</li>
+								<li>
+									<div class="thumb"><img src="/images/main/sec2_t_img3_1.jpg" alt="" /></div>
+									<div class="tit">K-Contents</div>
+								</li>
+								<li>
+									<div class="thumb"><img src="/images/main/sec2_t_img4_1.jpg" alt="" /></div>
+									<div class="tit">Entertainment</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li>
+						<div class="ico"><img src="/images/main/sec2_ico3.png" alt="" /></div>
+						<h4>Long-Life Cycle</h4>
+						<div class="con">
+							<dl class="st2">
+								<dt>지속적인 가입자 증가</dt>
+								<dd><img src="/images/main/sec2_g_img1_2.jpg" alt="" /></dd>
+							</dl>
+							<dl class="st2">
+								<dt>높은 유저 정착률 Stickness</dt>
+								<dd><img src="/images/main/sec2_g_img2.jpg" alt="" /></dd>
+							</dl>
+						</div>
+					</li>
+
+					<li>
+						<div class="ico"><img src="/images/main/sec2_ico4.png" alt="" /></div>
+						<h4>One-Stop System</h4>
+						<div class="con">
+							<dl class="st3">
+								<dt>
+									개발부터 퍼블리싱까지<br />
+									One-Stop System 구축
+								</dt>
+								<dd>
+									- Game Development
+									<div class="logos">
+										<img src="/images/main/sec2_l_img1.png" alt="" />
+										<img src="/images/main/sec2_l_img5.png" alt="" />
+									</div>
+								</dd>
+								<dd>
+									- Game Publishing
+									<div class="logos">
+										<img src="/images/main/sec2_l_img3.png" alt="" />
+										<img src="/images/main/sec2_l_img5.png" alt="" />
+									</div>								
+								</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="section3">
+		<div class="innerwrap">
+			
+			<div class="news">
+				<div class="titlearea">
+					<h3 class="title1">NEWS</h3>
+					<a class="more" href="./board/board.php?bo_table=news">뉴스 더보기</a>
+				</div>
+				<div class="listarea">
+					<ul>
+												
+						<li>
+							<a href="./board/board.php?bo_table=news&idx=98">
+								<div class="date">
+									<div class="day">29</div>
+									<div class="ym">2024.02</div>
+								</div>
+								<div class="txts">
+									<div class="tit">미투온, 지난해 매출 1090억…”K-콘텐츠 사업 확대&quot;</div>
+									<div class="txt">미투온 그룹의 코스닥 상장사 미투온과 고스트스튜디오가 지난해 실적을 발표했다.미투온은 잠정 실적 발표를 통해 지난해 연간 매출액 1090억원, 영입이익 221억원, 순이익 180억원을 기록했다고 29일 밝혔다.자회사인 고스트스튜디오는 지난해 매출액 991억원, 영업..</div>
+								</div>
+							</a>
+						</li>
+												
+						<li>
+							<a href="./board/board.php?bo_table=news&idx=97">
+								<div class="date">
+									<div class="day">25</div>
+									<div class="ym">2024.01</div>
+								</div>
+								<div class="txts">
+									<div class="tit">미투온, '제2의 나혼렙&quot; 만든다...네이버 웹툰 런칭 1달만에 신규 랭킹 3위</div>
+									<div class="txt">네이버웹툰과 카카오의 웹소설이 미국과 일본 시장을 빠르게 장악하며 글로벌 영향력을 확대하고 있는 가운데 웹툰 웹소설에 도전장을 내민 회사들에 관심이 쏠리고 있다.지난달 모바일 데이터 분석업체 센서타워가 발표한 '20223년 글로벌 만화 시장 인사이트'에 따르면 올해..</div>
+								</div>
+							</a>
+						</li>
+												
+						<li>
+							<a href="./board/board.php?bo_table=news&idx=96">
+								<div class="date">
+									<div class="day">27</div>
+									<div class="ym">2023.12</div>
+								</div>
+								<div class="txts">
+									<div class="tit">미버스랩스, 부동산 전문기업 '리얼티코리아'와 MOU</div>
+									<div class="txt">미투온 그룹의 블록체인 메인넷을 운영하는 미버스랩스는 STO(토큰 증권 발행) 관련 사업 추진을 위해 부동산 전문 기업 '리얼티코리아중개법인'과 업무협약(MOU)을 체결했다고 27일 밝혔다.회사 측에 따르면 리얼티코리아는 상업용 빌딩의 매입·매각, 임대차, 부동산 ..</div>
+								</div>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+
+			<div class="ir">
+				<div class="titlearea">
+					<h3 class="title1">IR</h3>
+					<a class="more" href="./m32.php">더보기</a>
+				</div>
+				<div class="infoarea">
+												<div class="ico">
+							<div class="img">
+								<div class="arr"></div>
+								<div class="box">
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+						</div>
+						<div class="info">
+							<dl>
+								<dt>현재가</dt>
+																	<dd class="today down">2,305</dd>
+															</dl>
+							<dl>
+								<dt>전일대비</dt>
+																	<dd class="down">30▼</dd>
+															</dl>
+							<dl>
+								<dt>등락률</dt>
+																	<dd class="down">1.28%</dd>
+															</dl>
+							<dl>
+								<dt>거래량</dt>
+								<dd>48,068</dd>
+							</dl>
+						</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="section4">
+		<div class="innerwrap">
+			<div>
+				<h3><span>ME2ON</span></h3>
+				<h4>미투온의 핵심 가치는 인재입니다.</h4>
+				<p>끊임없는 도전정신과 자기혁신으로 내일을 개척해 나아가고 있습니다.</p>
+				<a href="/board/board.php?bo_table=recruit">
+					채용공고 바로가기	<span class="more"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+</div><!-- //contents -->
+<div class="btn_top"><img src="/images/common/btn_top.png" alt="" /></div>
+</div><!-- //container -->
+
+<div id="footer">
+	<div class="foot">
+
+	<h1><img src="/images/common/foot_logo.jpg" alt="" /></h1>
+	<div class="copy">COPYRIGHT (C) ME2ON Co.,Ltd. All Rights Reserved.</div>
+	<div class="links">
+		<ul class="sns">
+			<li><a href="https://www.facebook.com/me2on/" target="_blank"><img src="/images/common/sns_facebook2.png" alt="" /></a></li>
+			<li><a href="https://www.youtube.com/channel/UCFIjZGzd-doStj9T9voGq_w" target="_blank"><img src="/images/common/sns_youtube2.png" alt="" /></a></li>
+            <li><a href="https://www.linkedin.com/company/me2on-group" target="_blank"><img src="/images/common/sns_linkedin2.png" alt="" /></a></li>
+		</ul>
+		<div class="family">
+			<a>Family site</a>
+			<ul>
+				<li><a href="http://www.ghoststudio.net/" target="_blank">Ghost Studio</a></li>
+				<li><a href="https://www.memoriki.com/" target="_blank">Memoriki</a></li>
+			</ul>
+		</div>
+	</div>
+
+</div></div><!-- //footer -->
+</div><!-- //wrap -->
+
+</body>
+</html>
