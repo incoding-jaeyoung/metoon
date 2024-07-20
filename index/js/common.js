@@ -1,6 +1,4 @@
 $(function(){
-
-
 	$(window).scroll(function(){
 	
 		scroll = $(window).scrollTop();
@@ -11,8 +9,6 @@ $(function(){
 		}
 	
 	});
-
-
 
 	btnmenu = 0;
 	$(".btn_menu").click(function(){		
@@ -95,3 +91,126 @@ $(function(){
 
 
 })
+
+
+
+
+$(document).ready(function() {
+	gsap.registerPlugin(ScrollTrigger);
+    headerInit()
+})
+
+const isMobile = $(window).width() < 900;
+
+function headerInit(){
+
+	const paths = $('#logo-path .path');
+      let delay = 0;
+
+      paths.each(function(index, path) {
+        gsap.set(path, { transformOrigin: "center center" });  // transform-origin 설정
+        gsap.timeline({ repeat: -1, repeatDelay: 4.5 })
+          .to(path, { rotationY: 360, duration: 1, ease: "power1.inOut", delay: delay });
+        
+        delay += 0.5;
+	});
+
+
+	var $nav = $('#header-new');
+	var lastScrollTop = 0; // 마지막 스크롤 위치를 저장하기 위한 변수 초기화
+	$(window).on('scroll', function () { // 윈도우 객체에 스크롤 이벤트 핸들러를 등록
+		var currentScroll = $(this).scrollTop(); // 현재 스크롤 위치를 가져옴
+		if (currentScroll > 40) { // 현재 스크롤 위치가 150픽셀보다 큰 경우
+			if (currentScroll > lastScrollTop) {  // 현재 스크롤 위치가 마지막 스크롤 위치보다 큰 경우 (스크롤 다운)
+				$nav.addClass('scroll');
+				$nav.addClass('active');
+				$('.content-feature').css('opacity',1)
+				$('.content-feature').css('pointerEvents','auto')
+			} else { // 현재 스크롤 위치가 마지막 스크롤 위치보다 작거나 같은 경우 (스크롤 업)
+				$nav.removeClass('scroll');
+			}
+			$('.list_gnb > li > a').on('mouseover',function(){
+				const indexNum = $('.list_gnb > li > a').index(this)
+				$('.list_gnb > li').removeClass('over')
+				$('.list_gnb > li').eq(indexNum).addClass('over')
+				
+				$('.lnb-inner ul').hide()
+				$('.lnb-inner ul').eq(indexNum).css('display','flex')	
+				$('.content-feature').css('opacity',0)
+				$('.content-feature').css('pointerEvents','none')
+			})
+			$('#header-new').on('mouseleave',function(){
+				$nav.addClass('scroll');
+				$nav.addClass('active');
+				$('.list_gnb > li').removeClass('over')
+				$('.lnb-inner ul').hide()
+				$('.content-feature').css('opacity',1)
+				$('.content-feature').css('pointerEvents','auto')
+				
+			})
+			
+		} else { // 현재 스크롤 위치가 150픽셀 이하인 경우
+			$nav.removeClass('scroll');
+			$nav.removeClass('active')
+			$('.content-feature').css('opacity',0)
+			$('.content-feature').css('pointerEvents','none')
+			$('.list_gnb > li > a').on('mouseover',function(){
+				const indexNum = $('.list_gnb > li > a').index(this)
+				$('.list_gnb > li').removeClass('over')
+				$('.list_gnb > li').eq(indexNum).addClass('over')
+				$('.lnb-inner ul').hide()
+				$('.lnb-inner ul').eq(indexNum).css('display','flex')
+				$('.content-feature').css('opacity',0)
+				$('.content-feature').css('pointerEvents','none')
+			})
+			$('#header-new').on('mouseleave',function(){
+				$nav.removeClass('scroll');
+				$nav.removeClass('active')
+				$('.list_gnb > li').removeClass('over')
+				$('.lnb-inner ul').hide()
+				$('.content-feature').css('opacity',0)
+				$('.content-feature').css('pointerEvents','none')
+					
+			})
+		}
+		lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
+	});
+	$nav.find('.inner_head .list_gnb a').on('mouseover',function(){
+		$nav.addClass('active')
+	})
+	
+	$('.over-text-wrap').each(function (e) {
+		$(this).find(' > *').addClass('over-text').wrapInner('<span class="over-text-con"></span>');
+		$('.over-text').css('overflow', 'hidden');
+		$('.over-text-con').css('display', 'block');
+		
+		let wrap = $(this).find('.over-text');
+		let text = $(this).find('.over-text-con');
+		
+		gsap.set(text, {
+		  y: '100%',
+		});
+		
+		gsap.to($(text), {
+		  y: 0,
+		  delay:1,
+		  duration: 1.8,
+		  ease: "power4.inOut",
+		  stagger: {
+			amount: 0.3
+		  }
+		});
+	  });
+	
+	  $('.m-nav dt').on('click',function(){
+		$(this).parent().siblings('dl').removeClass('active')
+		$(this).parent().toggleClass('active')
+	  })
+	  $('.m-menu button').on('click',function(){
+		$('.mob-menu').addClass('active')
+	  })
+	  $('.mob-menu button.close').on('click',function(){
+		$('.mob-menu').removeClass('active')
+	  })
+
+}

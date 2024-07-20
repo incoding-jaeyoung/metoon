@@ -14,18 +14,20 @@
 <meta name="date" content="" />
 <meta property="og:title" content="ME2ON Co., Ltd" />
 <meta property="og:description" content="Global Leading Casual Gaming & Entertainment Company" />
-<link rel="stylesheet" type="text/css" href="/css/swiper.min.css" />
-<link rel="stylesheet" type="text/css" href="/css/common.css" />
-<link rel="stylesheet" type="text/css" href="/css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css" />
 
-<link rel="stylesheet" type="text/css" href="/css/index_pc.css?ver=5" media="screen and (min-width:1400px)" />
-<link rel="stylesheet" type="text/css" href="/css/index_tablet.css?ver=5" media="screen and (min-width:813px) and (max-width:1399px)" />
-<link rel="stylesheet" type="text/css" href="/css/index_mobile.css?ver=5" media="screen and (max-width:812px)" />
-<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+<link rel="stylesheet" type="text/css" href="css/index_pc.css?ver=5" media="screen and (min-width:1400px)" />
+<link rel="stylesheet" type="text/css" href="css/index_tablet.css?ver=5" media="screen and (min-width:813px) and (max-width:1399px)" />
+<link rel="stylesheet" type="text/css" href="css/index_mobile.css?ver=5" media="screen and (max-width:812px)" />
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-<script type="text/javascript" src="/js/common.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="js/gsap.min.js"></script> <!-- 신규추가 스크립트 -->
+<script type="text/javascript" src="js/ScrollTrigger.min.js"></script> <!-- 신규추가 스크립트 -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src='//www.youtube.com/iframe_api'></script>
 <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
@@ -66,86 +68,188 @@ $(function(){
 
 <div id="wrap">
   <!-- 인덱스 신규 코드 -->
-   <header id="header-new" class="doc-header">
+  <header id="header-new" class="doc-header">
     <div class="inner_head">
-      <h1 class="doc-title"><a href="#"><img src="/images/common/logo1.png" alt=""></a></h1>
+      <h1 class="doc-title">
+        <a href="/">
+          <svg class="logo-path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820.83 181.4" width="200">
+            <path style="fill:#fee745; stroke-width:0px;" d="M67.2,103.83l-18.19-23.75v76.04c0,15.92-11.37,24.51-24.25,24.51S0,172.3,0,156.13V27.03C0,10.61,12.38,1.01,25.77,1.01c8.84,0,18.19,4.29,24.51,12.38l34.86,44.72L120.26,13.39c6.32-8.08,15.41-12.38,24.25-12.38,13.39,0,26.02,9.6,26.02,26.02v129.1c0,16.17-11.37,24.51-24.76,24.51s-24.25-8.34-24.25-24.51v-76.04l-17.94,23.75c-5.81,7.83-11.62,10.36-18.44,10.36s-12.63-3.54-17.94-10.36Z"/>
+            <path style="fill:#fee745; stroke-width:0px;" d="M210.45,179.63c-16.17,0-24.25-8.34-24.25-24.76V26.53c0-16.42,8.08-24.76,24.25-24.76h83.37c15.41,0,24.51,11.37,24.51,24.76s-9.09,24.76-24.51,24.76h-58.86v16.93h49.01c14.15,0,22.48,10.36,22.48,22.48s-8.34,22.49-22.48,22.49h-49.01v17.18h58.86c15.41,0,24.51,11.12,24.51,24.51s-9.09,24.76-24.51,24.76h-83.37Z"/>
+            <path style="fill:#fff; stroke-width:0px;" d="M339.3,179.63c-4.29,0-6.32-2.53-6.32-7.33v-49.26c0-36.63,14.4-52.3,49.77-52.3h39.66c8.34,0,12.63-3.28,12.63-9.6s-4.29-9.85-12.63-9.85h-60.89c-15.41,0-23.5-8.34-23.75-24.76v-1.01c0-15.92,7.83-23.75,23.5-23.75h60.89c37.14,0,55.83,18.95,55.83,57.1s-11.62,53.31-49.01,53.31h-41.69c-7.83,0-11.62,3.03-11.62,9.35l.51,8.84h76.04c18.44,0,25.77,8.08,25.77,24.51s-8.59,24.76-26.02,24.76h-112.68Z"/>
+            <path style="fill:#fee745; stroke-width:0px;" d="M579.81,0c50.28,0,90.95,40.42,90.95,90.7s-40.67,90.7-90.95,90.7-90.7-40.42-90.7-90.7S529.53,0,579.81,0ZM580.06,132.38c22.74,0,41.43-17.94,41.43-40.93s-18.7-41.43-41.43-41.43-41.18,18.44-41.18,41.43,18.44,40.93,41.18,40.93Z"/>
+            <path style="fill:#fee745; stroke-width:0px;" d="M773.84,24.25c0-15.16,10.61-23.24,23.75-23.24,12.38,0,23.24,8.08,23.24,23.24v131.88c0,15.41-11.37,24.51-23.24,24.51-8.08,0-16.17-3.79-21.98-12.63l-45.98-68.46v57.85c0,15.16-10.61,23.24-23.75,23.24-12.38,0-22.99-8.08-22.99-23.24V25.26c0-15.16,11.12-24.25,22.99-24.25,8.34,0,16.42,3.54,22.23,12.38l45.73,68.47V24.25Z"/>
+          </svg>
+          
+        </a>
+      </h1>
       <nav class="doc-gnb">
-        <h2 class="screen_out">메인메뉴</h2>
         <ul class="list_gnb">
-          <li class="on"><a href="" class="link_gnb">COMPANY</a>
-            <ul class="list_lnb">
-              <li class="on"><a href="" class="link_lnb">회사개요</a></li> 
-              <li class=""><a href="" class="link_lnb">CEO 인사말</a></li>
-              <li class=""><a href="" class="link_lnb">VISION & MISSION</a></li>
-              <li class=""><a href="" class="link_lnb">연혁</a></li>
-              <li class=""><a href="" class="link_lnb">오시는길</a></li>
-            </ul>
-          </li>
-          <li class=""><a href="" class="link_gnb">GAME</a>
-            <ul class="list_lnb">
-              <li class=""><a href="" class="link_lnb">뮤직 엔터테인먼트</a></li>
-              <li class=""><a href="" class="link_lnb">스토리 엔터테인먼트</a></li>
-              <li class=""><a href="" class="link_lnb">미디어 엔터테인먼트</a></li>
-            </ul>
-          </li>
-          <li class=""><a href="" class="link_gnb">IR</a>
-            <ul class="list_lnb">
-              <li class=""><a href="" class="link_lnb">공시정보</a></li>
-              <li class=""><a href="" class="link_lnb">주가정보</a></li>
-              <li class=""><a href="" class="link_lnb">재무정보</a></li>
-              <li class=""><a href="" class="link_lnb">IR자료실</a></li>
-              <li class=""><a href="" class="link_lnb">공고</a></li>
-            </ul>
-          </li>
-          <li class=""><a href="" class="link_gnb">PR</a>
-            <ul class="list_lnb">
-              <li class=""><a href="" class="link_lnb">뉴스</a></li>  
-              <li class=""><a href="" class="link_lnb">미디어</a></li>
-              <li class=""><a href="" class="link_lnb">갤러리</a></li>
-            </ul>
-          </li>
-          <li class=""><a href="" class="link_gnb">RECRUIT</a>
-            <ul class="list_lnb">
-              <li class=""><a href="" class="link_lnb">인재상</a></li>
-              <li class=""><a href="" class="link_lnb">복리후생</a></li>
-              <li class=""><a href="" class="link_lnb">채용공고</a></li>
-            </ul>
-          </li>
+          <li><a href="/m11.php" class="link_gnb">COMPANY</a></li>
+          <li><a href="/m21.php" class="link_gnb">GAME</a></li>
+          <li><a href="/m31.php" class="link_gnb">IR</a></li>
+          <li><a href="/board/board.php?bo_table=news" class="link_gnb">PR</a></li>
+          <li><a href="/m51.php" class="link_gnb">RECRUIT</a></li>
         </ul>
       </nav>
       <div class="doc-lang">
-        <a href="https://www.me2on.com/" target="">KOR</a>
-        <a href="https://www.me2on.com/en/" target="">ENG</a>
+        <a href="/" target="" class="active">KOR</a>
+        <span></span>
+        <a href="/en/" target="">ENG</a>
+      </div>
+      <div class="m-menu">
+        <button type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
-    <section class="content-feature" style="">
+    <div class="list-lnb">
+      <div class="lnb-inner">
+        <ul>
+          <li><a href="/m11.php?#tab1">회사개요</a></li>
+          <li><a href="/m11.php?#tab2">CEO 인사말</a></li>
+          <li><a href="/m11.php?#tab3">VISION & MISSION</a></li>
+          <li><a href="/m11.php?#tab4">연혁</a></li>
+          <li><a href="/m11.php?#tab5">오시는길</a></li>
+        </ul>
+        <ul></ul>
+        <ul>
+          <li><a href="/m31.php">공시정보</a></li>
+          <li><a href="/m32.php">주가정보</a></li>
+          <li><a href="/m33.php">재무정보</a></li>
+          <li><a href="/board/board.php?bo_table=irdata">IR자료실</a></li>
+          <li><a href="/board/board.php?bo_table=notice">공고</a></li>
+        </ul>
+        <ul>
+          <li><a href="/board/board.php?bo_table=news">뉴스</a></li>
+          <li><a href="/board/board.php?bo_table=media">미디어</a></li>
+          <li><a href="/board/board.php?bo_table=gallery">갤러리</a></li>
+        </ul>
+        <ul>
+          <li><a href="/m51.php">인재상</a></li>
+          <li><a href="/m52.php">복리후생</a></li>
+          <li><a href="/board/board.php?bo_table=recruit">채용공고</a></li>
+        </ul>
+      </div>
+    </div>
+    <section class="content-feature">
       <div class="inner_path">
         <h3 class="screen_out">현재 페이지 위치</h3>
-        <div class="wrap_path">홈</div>
+        <div class="wrap_path"><a href="#">홈</a></div>
+        <div class="this-page">현재페이지 텍스트 영역</div>
       </div>
     </section>
-   </header>
+  </header>
+  <aside class="mob-menu">
+    <div class="m-header">
+      <h1 class="doc-title">
+        <a href="/">
+          <svg class="logo-path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820.83 181.4" width="200">
+            <path style="fill:#fee745; stroke-width:0px;" d="M67.2,103.83l-18.19-23.75v76.04c0,15.92-11.37,24.51-24.25,24.51S0,172.3,0,156.13V27.03C0,10.61,12.38,1.01,25.77,1.01c8.84,0,18.19,4.29,24.51,12.38l34.86,44.72L120.26,13.39c6.32-8.08,15.41-12.38,24.25-12.38,13.39,0,26.02,9.6,26.02,26.02v129.1c0,16.17-11.37,24.51-24.76,24.51s-24.25-8.34-24.25-24.51v-76.04l-17.94,23.75c-5.81,7.83-11.62,10.36-18.44,10.36s-12.63-3.54-17.94-10.36Z"/>
+            <path style="fill:#fee745; stroke-width:0px;" d="M210.45,179.63c-16.17,0-24.25-8.34-24.25-24.76V26.53c0-16.42,8.08-24.76,24.25-24.76h83.37c15.41,0,24.51,11.37,24.51,24.76s-9.09,24.76-24.51,24.76h-58.86v16.93h49.01c14.15,0,22.48,10.36,22.48,22.48s-8.34,22.49-22.48,22.49h-49.01v17.18h58.86c15.41,0,24.51,11.12,24.51,24.51s-9.09,24.76-24.51,24.76h-83.37Z"/>
+            <path style="fill:#fff; stroke-width:0px;" d="M339.3,179.63c-4.29,0-6.32-2.53-6.32-7.33v-49.26c0-36.63,14.4-52.3,49.77-52.3h39.66c8.34,0,12.63-3.28,12.63-9.6s-4.29-9.85-12.63-9.85h-60.89c-15.41,0-23.5-8.34-23.75-24.76v-1.01c0-15.92,7.83-23.75,23.5-23.75h60.89c37.14,0,55.83,18.95,55.83,57.1s-11.62,53.31-49.01,53.31h-41.69c-7.83,0-11.62,3.03-11.62,9.35l.51,8.84h76.04c18.44,0,25.77,8.08,25.77,24.51s-8.59,24.76-26.02,24.76h-112.68Z"/>
+            <path style="fill:#fee745; stroke-width:0px;" d="M579.81,0c50.28,0,90.95,40.42,90.95,90.7s-40.67,90.7-90.95,90.7-90.7-40.42-90.7-90.7S529.53,0,579.81,0ZM580.06,132.38c22.74,0,41.43-17.94,41.43-40.93s-18.7-41.43-41.43-41.43-41.18,18.44-41.18,41.43,18.44,40.93,41.18,40.93Z"/>
+            <path style="fill:#fee745; stroke-width:0px;" d="M773.84,24.25c0-15.16,10.61-23.24,23.75-23.24,12.38,0,23.24,8.08,23.24,23.24v131.88c0,15.41-11.37,24.51-23.24,24.51-8.08,0-16.17-3.79-21.98-12.63l-45.98-68.46v57.85c0,15.16-10.61,23.24-23.75,23.24-12.38,0-22.99-8.08-22.99-23.24V25.26c0-15.16,11.12-24.25,22.99-24.25,8.34,0,16.42,3.54,22.23,12.38l45.73,68.47V24.25Z"/>
+          </svg>
+          
+        </a>
+      </h1>
+      <button type="button" class="close">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="m-nav">
+      <dl>
+        <dt>COMPANY</dt>
+        <dd>
+          <ul>
+            <li><a href="/m11.php?#tab1">회사개요</a></li>
+            <li><a href="/m11.php?#tab2">CEO 인사말</a></li>
+            <li><a href="/m11.php?#tab3">VISION & MISSION</a></li>
+            <li><a href="/m11.php?#tab4">연혁</a></li>
+            <li><a href="/m11.php?#tab5">오시는길</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <dl>
+        <dt><a href="/m21.php">GAME</a></dt>
+      </dl>
+      <dl>
+        <dt>IR</dt>
+        <dd>
+          <ul>
+            <li><a href="/m31.php">공시정보</a></li>
+            <li><a href="/m32.php">주가정보</a></li>
+            <li><a href="/m33.php">재무정보</a></li>
+            <li><a href="/board/board.php?bo_table=irdata">IR자료실</a></li>
+            <li><a href="/board/board.php?bo_table=notice">공고</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <dl>
+        <dt>PR</dt>
+        <dd>
+          <ul>
+            <li><a href="/board/board.php?bo_table=news">뉴스</a></li>
+            <li><a href="/board/board.php?bo_table=media">미디어</a></li>
+            <li><a href="/board/board.php?bo_table=gallery">갤러리</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <dl>
+        <dt>RECRUIT</dt>
+        <dd>
+          <ul>
+            <li><a href="/m51.php">인재상</a></li>
+            <li><a href="/m52.php">복리후생</a></li>
+            <li><a href="/board/board.php?bo_table=recruit">채용공고</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <div class="doc-lang">
+        <a href="/" target="" class="active">KOR</a>
+        <span></span>
+        <a href="/en/" target="">ENG</a>
+      </div>
+    </div>
+    <div class="m-footer">
+      <ul class="sns">
+        <li><a href="https://www.facebook.com/me2on/" target="_blank"><img src="https://www.me2on.com/images/common/sns_facebook.png" alt="미투온 페이스북"></a></li>
+        <li><a href="https://www.youtube.com/channel/UCFIjZGzd-doStj9T9voGq_w" target="_blank"><img src="https://www.me2on.com/images/common/sns_youtube.png" alt="미투온 유튜브"></a></li>
+        <li><a href="https://www.linkedin.com/company/me2on-group" target="_blank"><img src="https://www.me2on.com/images/common/sns_linkedin.png" alt="미투온 링크드인"></a></li>
+      </ul>
+      <p class="copy">COPYRIGHT (C) ME2ON Co.,Ltd. All Rights Reserved.</p>
+    </div>
+  </aside>
   <div class="index-visual">
-    <video src="https://t1.kakaocdn.net/kakaoent_com/static/video/index.mp4" autoplay="autoplay" muted="muted" loop="loop"
+    <video src="images/common/video-index.mp4" autoplay="autoplay" muted="muted" loop="loop"
       playsinline="" class="vod_home"></video>
+    <div class="slogan over-text-wrap">
+      <div>GLOBAL LEADING</div> 
+      <div>ENTERTAINMENT</div>
+      <div>GROUP</div>
+    </div>
   </div>
+  <div class="scroll-test">스크롤 테스트 영역</div>
   <!-- // 인덱스 신규 코드 -->
 
 
   <!-- 기존 사이트 소스 -->
-  <div class="btn_top"><img src="/images/common/btn_top.png" alt="" /></div>
+  <div class="btn_top"><img src="images/common/btn_top.png" alt="" /></div>
   <div id="footer">
     <div class="foot">
-      <h1><img src="/images/common/foot_logo.jpg" alt="" /></h1>
+      <h1><img src="images/common/foot_logo.jpg" alt="" /></h1>
       <div class="copy">COPYRIGHT (C) ME2ON Co.,Ltd. All Rights Reserved.</div>
       <div class="links">
         <ul class="sns">
-          <li><a href="https://www.facebook.com/me2on/" target="_blank"><img src="/images/common/sns_facebook2.png"
+          <li><a href="https://www.facebook.com/me2on/" target="_blank"><img src="images/common/sns_facebook2.png"
                 alt="" /></a></li>
           <li><a href="https://www.youtube.com/channel/UCFIjZGzd-doStj9T9voGq_w" target="_blank"><img
-                src="/images/common/sns_youtube2.png" alt="" /></a></li>
+                src="images/common/sns_youtube2.png" alt="" /></a></li>
           <li><a href="https://www.linkedin.com/company/me2on-group" target="_blank"><img
-                src="/images/common/sns_linkedin2.png" alt="" /></a></li>
+                src="images/common/sns_linkedin2.png" alt="" /></a></li>
         </ul>
         <div class="family">
           <a>Family site</a>

@@ -7,7 +7,7 @@
 *{margin:0;padding:0}
 html,body{width:100%;height:100%}
 html{overflow-y:scroll}
-body{background-color:#fff;*word-break:break-all;-ms-word-break:break-all;
+body{background-color:#fff; word-break:break-all;-ms-word-break:break-all;
 -webkit-text-size-adjust: 100% !important;-moz-text-size-adjust: 100% !important;-ms-text-size-adjust: 100% !important;}
 body,h1,h2,h3,h4,h5,h6,th,td,li,dt,dd,a,p,input,textarea,select,option{
 	color:#555;
@@ -25,13 +25,13 @@ button,label{cursor:pointer;_cursor /**/:hand}
 button *{position:relative}
 textarea{overflow:auto}
 option{padding-right:6px}
-.input_text, textarea{*margin:-1px 0;padding-right:1px}
+.input_text, textarea{margin:-1px 0;padding-right:1px}
 .input_check, .input_radio{width:13px;height:13px}
 .blind, legend, caption{text-indent:-9999px;font-size:0;line-height:0;overflow:hidden}
 hr{display:none}
-legend{*width:0}
+legend{width:0}
 :root legend{margin-top:-1px;font-size:0;line-height:0}
-caption{*line-height:0}
+caption{line-height:0}
 img{max-width:100%;}
 
 /*test*/
